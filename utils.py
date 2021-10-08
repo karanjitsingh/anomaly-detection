@@ -101,7 +101,7 @@ def plot_data(logname='log.csv',save_fig=False):
 		plt.show()
 
 	
-def remove_anomalies(X,y, anom=1):
+def get_anomalies(y, anom=1):
     indices = np.where(y==anom)
     intervals = []
     left = None
@@ -134,7 +134,7 @@ def load_data(name,len_seq,stride, removeAnom = False):
     for file in data:
         X, y = load_dataset(file)
         if removeAnom:
-            ranges = remove_anomalies(X,y)
+            ranges = get_anomalies(y)
             print(ranges)
             last = 0
             for interval in ranges:

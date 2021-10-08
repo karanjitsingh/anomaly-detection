@@ -19,3 +19,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 [pP]apers/*.pdf
+ignore/
+
+.vscode/

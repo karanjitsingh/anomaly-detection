@@ -147,8 +147,10 @@ class TrainDeepConvLSTM():
                 for batch in iterate_minibatches_2D(self.X_train, self.y_train, config.batch_size, config.stride, shuffle=True, num_batches=config.num_batches, batchlen=config.batchlen, drop_last=True):
 
                     x,y,pos= batch
+                    
 
                     inputs, targets = torch.from_numpy(x), torch.from_numpy(y) # Get torch tensors.
+                    print(inputs.shape)
 
 
                     self.opt.zero_grad() # Clear gradients in optimizer
@@ -341,6 +343,7 @@ class TrainDeepConvLSTM():
 
 
 config = Config()
+config.len_seq = 128
 config.num_epochs = 1
 dcl = TrainDeepConvLSTM(config = config)
 dcl.train()

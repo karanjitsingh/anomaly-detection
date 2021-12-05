@@ -105,7 +105,7 @@ class TrainerGeneric():
         self.X_train, self.y_train = load_data('train',config.len_seq,config.stride)
         self.X_val, self.y_val = load_data('val',config.len_seq,config.stride)
 
-        # net.apply(init_weights)
+        net.apply(init_weights)
 
 
         self.optimizer = Adam(net.parameters(), lr=config.lr)

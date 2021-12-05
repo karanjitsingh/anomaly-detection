@@ -55,11 +55,27 @@ def load_data(name,len_seq,stride, removeAnom = False):
     return Xs, ys
 
 
-X,y = load_data('train',24,1, removeAnom=True)
-X = np.array(X)
-y = np.array(y)
-for i in range(len(X)):
-    print(y[i].shape)
+# X,y = load_data('train',24,1, removeAnom=True)
+# X = np.array(X)
+# y = np.array(y)
+# for i in range(len(X)):
+#     print(y[i].shape)
 
-print(len(X), len(y))
+# print(len(X), len(y))
+
+def load_data_plain(name):
+    Xs = []
+    ys = []
+
+    ## Use glob module and wildcard to build a list of files to load from data directory
+    path = "data/{}_data_*".format(name)
+    data = glob.glob(path)
+
+    for file in data:
+        X, y = load_dataset(file)
+        Xs.append(X)
+        ys.append(y)
+        
+
+    return Xs, ys
 

@@ -1,5 +1,8 @@
 # anomaly-detection
-## Proposal: Anomaly Detection in Time Series using AutoEncoders
+
+To view and reproduce the experiment, plese follow the [colab notebook](https://colab.research.google.com/drive/1X6a-0NFpzFqvAsK3bQW_iFln8Vz4rsPc?usp=sharing). The notebook has already been setup to replicate the require code in the VM with the specified random state from `results/rstate.pickle` that will reproduce the results from the [paper](report.pdf).
+
+## Anomaly Detection in Time Series using AutoEncoders
 
 ### Abstract
 
@@ -14,14 +17,6 @@ This project focuses on anomaly detection in time series problems. We make two a
 One such problems in anomaly detection of time series is Daphnet Freezing of Gait (FOG) [1]. The FOG dataset is devised to benchmark automatic methods to recognize gait freeze from wearable acceleration sensors placed on legs and hips. The dataset was recorded in the lab with emphasis on generating many freeze events. Users performed three kinds of tasks: straight line walking, walking with numerous turns, and finally a more realistic activity of daily living (ADL) task, where users went into different rooms while fetching coffee, opening doors, etc.
 
 For this project, we mainly work with proven time series ensembles such as neural networks including LSTM and convolutional techniques as well as support vector machines. We experiment with both supervised and unsupervised methodologies, while focusing on unsupervised techniques as they best fit the problem description. The goal of the project is to train these models on time series datasets in order to detect anomalies and deviations in the time series.
-
-### Existing Work on Anomaly Detection
-
-Anomaly detection is a vast field in machine learning. We surveyed the major techniques for general anomaly detection as well as anomaly detection in time series in the machine learning paradigm. Both categories contain machine learning techniques. The paper _&quot;Machine Learning Techniques for Anomaly Detection&quot;_ [2], overviews most general techniques and serves as our understanding for anomaly detection. The paper, however, only covers possible models from both supervised and unsupervised categories on anomaly detection without generalized experimentation. The most notable models that stand out for our problem set are unsupervised neural networks and One-Class SVMs. As described in the paper, these techniques do not need training data. Both these models are assumed as single class outputs which can be trained on a given dataset whose output can be interpreted as confidence intervals for the normality of the test input.
-
-Another paper _&quot;Anomaly detection in time series&quot;_ [3], discusses techniques that can be used in this project. This paper drills into the nature of time series and discusses methods that can be used to detect anomalies in long streaming time series as well as short / long instances of time series data.
-
-An existing work with neural networks on Daphnet Freezing of Gait, DeepConvLSTM [4] detects anomalies in the said dataset using supervised neural networks for classification of the anomalies. This paper is best fit to serve as our baseline for experiments with the FOG dataset.
 
 ### References
 

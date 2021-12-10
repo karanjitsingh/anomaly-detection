@@ -1,6 +1,6 @@
 # anomaly-detection
 
-To view and reproduce the experiment, plese follow the [colab notebook](https://colab.research.google.com/drive/1X6a-0NFpzFqvAsK3bQW_iFln8Vz4rsPc?usp=sharing). The notebook has already been setup to replicate the require code in the VM with the specified random state from `results/rstate.pickle` that will reproduce the results from the [paper](report.pdf).
+To view and reproduce the experiment, please follow the [colab notebook](https://colab.research.google.com/drive/1X6a-0NFpzFqvAsK3bQW_iFln8Vz4rsPc?usp=sharing). The notebook has already been setup to replicate the require code in the VM with the specified random state from `results/rstate.pickle` that will reproduce the results from the [paper](report.pdf).
 
 ## Anomaly Detection in Time Series using AutoEncoders
 
